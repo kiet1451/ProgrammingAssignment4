@@ -1,0 +1,44 @@
+#Code book of Getting and Cleaning Data Course Project Week 4 
+By Kiet Huynh for the Coursera/JHU assignment.
+
+#Data Source
+
+UCI data acquired to process and clean for the further analysis from the website
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The source information is from readme.txt in UCI HAR Dataset downloaded folder
+
+#Data Processing
+
+1) Merges the training and the test sets to create one data set.
+2) Extracts only the measurements on the mean and standard deviation for each measurement.
+3) Uses descriptive activity names to name the activities in the data set
+4) Appropriately labels the data set with descriptive variable names.
+5) Creates a second data set from the data set of step (d), independent tidy data set with the average of each variable for each activity and each subject.
+
+#Variable
+1) Imported from UCI zipfile
+UCIactivity<- 6 activites of exercises
+UCIfeature <- feature variable names of for X_test and X_train
+UCItestS   <- test set of 30 subject number 
+UCItrainS  <- train set of 30 subject number
+UCItestX   <- test set feature measurements
+UCItrainX  <- train set feature measurements
+UCItestY   <- test set of 6 activities
+UCItrainY  <- train set of 6 activities
+
+2) Combined data
+Features: feature data for X_test and X_train
+Activities: activity data for Y_test and Y_train
+Subjects: subject data for test and train
+
+3) Column names
+getUCIfeature <- subset with mean and standard only column names
+UCI_combine   <- set of combined data from Features, Activities, and Subjects
+select_name   <- column names of getUCIfeature, Subject, and Activity.
+select_data   <- reduced data set of UCI_combine with selected column from select_name
+
+4) Tidy data set
+selected_data2 <-data set of the mean from Subject and Activity.
+
+
+
